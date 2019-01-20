@@ -1,0 +1,32 @@
+<div class="middle-box text-center loginscreen animated fadeInDown">
+  <div>
+      
+      <h3>{{ 'LOGIN.welcome' | translate }}</h3>
+      
+      <p>
+         {{ 'LOGIN.message' | translate }} 
+      </p>
+      <p>Login in. To see it in action.</p>
+      <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+      <form class="m-t" role="form" [formGroup]="form" (ngSubmit)="login()">
+          <div class="form-group">
+              <input 
+                     formControlName="username"
+                     type="email" 
+                     class="form-control" 
+                     placeholder="{{'LOGIN.username' | translate}}">
+                     <div *ngIf="username.touched && username.invalid" class="alert alert-danger">Username Required</div>
+          </div>
+          <div class="form-group">
+              <input 
+                     formControlName="password"
+                     type="password" 
+                     class="form-control" 
+                     placeholder="{{'LOGIN.password' | translate}}">
+                     <div *ngIf="password.touched && password.invalid" class="alert alert-danger">Password Required</div>
+          </div>
+          <button [disabled]="!form.valid" type="submit" class="btn btn-primary block full-width m-b">{{'LOGIN.login' | translate}}</button>
+      </form>
+      
+  </div>
+</div>

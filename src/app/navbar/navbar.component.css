@@ -1,0 +1,9 @@
+.nav > li > a {
+    color: #a7b1c2;
+    font-weight: 1400;
+    padding: 14px 20px 14px 25px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #9CC63F;
+}

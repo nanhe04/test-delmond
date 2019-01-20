@@ -1,0 +1,33 @@
+<nav id="navbar" class="navbar navbar-dark">
+
+  <a class="navbar-brand" routerLink=""><img [src]="logo">
+  </a>
+  <p>{{today | date:'medium'}} </p>
+  <!-- <p *ngIf="name">{{name}}</p> -->
+  <ul class="nav nav-pills">
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+        aria-expanded="false">Language</a>
+      <div class="dropdown-menu">
+        <!-- <img (click)="translate.use('esp')" class="lang" [src]="esp_logo"> -->
+        <!-- <img (click)="translate.use('en')" class="lang" [src]="en_logo"> -->
+        <a class="dropdown-item" (click)="translate.use('esp')">español</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" (click)="translate.use('en')">english</a>
+        <div role="separator" class="dropdown-divider"></div>
+
+
+      </div>
+    </li>
+    <li class="nav-item dropdown" *ngIf="auth.isLoggedIn()">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLinkActive="active current" routerLink="/profile">Profile</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" routerLinkActive="active current" (click)="logout()">Logout</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<hr />

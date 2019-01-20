@@ -1,0 +1,157 @@
+<div class="container">
+  <div class="row wrapper border-bottom page-heading">
+    <div class="col-sm-12">
+      <h2><i class="fa fa-bars"> Registered Users</i></h2>
+    </div>
+    <hr />
+    <div class="col-sm-2">
+      <button
+        class="btn btn-primary dim btn-small-dim"
+        type="button"
+        routerLink="add"
+      >
+        <i class="fa fa-plus"> Add User</i>
+      </button>
+    </div>
+  </div>
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title"><h5></h5></div>
+          <div class="ibox-content">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content">
+                    <div class="table-responsive">
+                      <mat-form-field>
+                        <input
+                          matInput
+                          (keyup)="applyFilter($event.target.value)"
+                          placeholder="Search"
+                        />
+                      </mat-form-field>
+
+                      <div class="mat-elevation-z8">
+                        <table mat-table [dataSource]="dataSource" matSort>
+                          <!-- ID Column -->
+                          <ng-container matColumnDef="#">
+                            <th
+                              mat-header-cell
+                              *matHeaderCellDef
+                              mat-sort-header
+                            >
+                              #
+                            </th>
+                            <td mat-cell *matCellDef="let row">
+                              {{ row.index }}
+                            </td>
+                          </ng-container>
+
+                          <!-- Name Column -->
+                          <ng-container matColumnDef="name">
+                            <th
+                              mat-header-cell
+                              *matHeaderCellDef
+                              mat-sort-header
+                            >
+                              Name
+                            </th>
+                            <td mat-cell *matCellDef="let row">
+                              {{ row.name }}
+                            </td>
+                          </ng-container>
+
+                          <!-- Image Column -->
+                          <ng-container matColumnDef="image">
+                            <th
+                              mat-header-cell
+                              *matHeaderCellDef
+                              mat-sort-header
+                            >
+                              Image
+                            </th>
+                            <td mat-cell *matCellDef="let row">
+                              <div class="user-image">
+                                <img [src]="row.image" />
+                              </div>
+                            </td>
+                          </ng-container>
+
+                          <!-- City Column -->
+                          <ng-container matColumnDef="city">
+                            <th
+                              mat-header-cell
+                              *matHeaderCellDef
+                              mat-sort-header
+                            >
+                              City
+                            </th>
+                            <td
+                              mat-cell
+                              *matCellDef="let row"
+                              [style.color]="row.color"
+                            >
+                              {{ row.city }}
+                            </td>
+                          </ng-container>
+
+                          <!-- Action Column -->
+                          <ng-container matColumnDef="action">
+                            <th
+                              mat-header-cell
+                              *matHeaderCellDef
+                              mat-sort-header
+                            >
+                              Action
+                            </th>
+                            <td
+                              mat-cell
+                              *matCellDef="let row"
+                              [style.color]="row.color"
+                            >
+                              <a
+                                ><button (click)="view(row._id)">
+                                  <i class="fa fa-eye text-navy"></i></button
+                              ></a>
+                              |
+                              <a
+                                ><button
+                                  [routerLink]="['/users/edit', row._id]"
+                                >
+                                  <i class="fa fa-pencil text-navy"></i></button
+                              ></a>
+                              |
+                              <a
+                                ><button (click)="delete(row._id)">
+                                  <i class="fa fa-trash text-navy"></i></button
+                              ></a>
+                            </td>
+                          </ng-container>
+
+                          <tr
+                            mat-header-row
+                            *matHeaderRowDef="displayedColumns"
+                          ></tr>
+                          <tr
+                            mat-row
+                            *matRowDef="let row; columns: displayedColumns"
+                          ></tr>
+                        </table>
+
+                        <mat-paginator
+                          [pageSizeOptions]="[5, 10, 25, 100]"
+                        ></mat-paginator>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

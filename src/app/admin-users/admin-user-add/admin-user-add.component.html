@@ -1,0 +1,185 @@
+
+<div class="container">
+  <!-- header -->
+<div class="row wrapper border-bottom page-heading">
+  <div class="col-sm-10">
+      <h2><i class="fa fa-bars"> Add</i></h2>   
+  </div>
+  <hr/>        
+  <div class="col-sm-2">
+      <button class="btn btn-primary dim btn-small-dim" type="button" routerLink="/admin-users"><i class="fa fa-arrow-left"> Back</i></button>
+  </div>
+</div>
+<!-- form -->
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="ibox float-e-margins">
+              <div class="ibox-content">
+                  <form method="get" class="form-horizontal">
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                        <input type="text" name="name" class="form-control">
+                        </div>
+                      </div>
+                      <div class="hr-line-dashed"></div>
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label">UserName</label>
+                          <div class="col-sm-10">
+                          <input type="text" name="username" class="form-control">
+                          </div>
+                        </div>
+                      <div class="hr-line-dashed"></div>
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label">Password</label>
+                          <div class="col-sm-10">
+                          <input type="password" name="password" class="form-control">
+                          </div>
+                      </div>
+                      <div class="hr-line-dashed"></div>
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label">Email</label>
+                          <div class="col-sm-10">
+                          <input type="email" name="email" class="form-control">
+                          </div>
+                      </div>
+                      <div class="hr-line-dashed"></div>
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label">Contact Number</label>
+                          <div class="col-sm-10">
+                          <input type="number" name="contact" class="form-control">
+                          </div>
+                      </div>
+                      <div class="hr-line-dashed"></div>
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label">Address</label>
+                          <div class="col-sm-10">
+                          <textarea type="text" name="address" class="form-control"></textarea>
+                          </div>
+                      </div>
+                      <div class="hr-line-dashed"></div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Select City</label>
+  
+                          <div class="col-sm-10">
+                            <select class="form-control m-b" name="city">
+                                <option>Select City</option>
+                                <option>City1</option>
+                                <option>City1</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                      
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label">Image</label>
+                          <div class="col-sm-10">
+                          <input type="file" name="image" class="form-control">
+                          </div>
+                      </div>
+                      <div class="hr-line-dashed"></div>
+
+
+                      <div class="ibox-content">
+                         
+                              <div class="table-responsive-sm">
+                                  <table class="table">
+                                      <caption>List of Modules</caption>
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">#</th>
+                                          <th scope="col">Module</th>
+                                          <th scope="col">Permission</th>                                         
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">1</th>
+                                          <td>	Dashboard </td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">2</th>
+                                          <td> Users </td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">3</th>
+                                          <td> Drivers </td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">4</th>
+                                          <td>Advertisements</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">5</th>
+                                          <td>Settings</td>
+                                          <td><input type="checkbox" value="" > City <br/>
+                                              <input type="checkbox" value="" > Commission<br/>
+                                              <input type="checkbox" value="" > Vehicles<br/>
+                                              <input type="checkbox" value="" > Price Management<br/>
+                                              <input type="checkbox" value="" > Special Delivery Rule<br/>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">6</th>
+                                          <td>Orders Placed</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">7</th>
+                                          <td>View Order Reports</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">8</th>
+                                          <td>View User Contacts</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">9</th>
+                                          <td>Admin Users</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">10</th>
+                                          <td>Place Order</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">11</th>
+                                          <td>Shared</td>
+                                          <td><input type="checkbox" value="" ></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+  
+                      </div>
+                      
+                      <div class="hr-line-dashed"></div>
+                      <div class="form-group">
+                          <div class="col-sm-4 col-sm-offset-2">
+                              <button class="btn btn-primary" type="submit">Save changes</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+

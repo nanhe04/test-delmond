@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row wrapper border-bottom page-heading">
+    <div class="col-sm-10">
+      <h2><i class="fa fa-bars"> Details</i></h2>
+    </div>
+    <hr />
+    <div class="col-sm-2">
+      <button class="btn btn-primary dim btn-small-dim" type="button" routerLink="/users"><i class="fa fa-arrow-left">
+          Back</i></button>
+    </div>
+  </div>
+  <div class="wrapper wrapper-content animated fadeInRight white-bg">
+
+
+    <div class="row m-b-lg m-t-lg">
+      <div class="col-md-6">
+
+        <div class="profile-image">
+          <img src="{{data.image}}" class="img-circle circle-border m-b-md" alt="profile">
+        </div>
+        <div class="profile-info">
+          <div class="">
+            <div>
+              <h2 class="no-margins">
+                {{data.name}}
+              </h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <table class="table small m-b-xs">
+          <tbody>
+            <tr>
+              <td>
+                <strong>Username</strong> {{data.username}}
+              </td>
+              <td>
+                <strong>Password</strong> {{data.password}}
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <strong>Email</strong> {{data.email}}
+              </td>
+              <td>
+                <strong>Contact</strong> {{data.mobile}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Address</strong> {{data.address}}
+              </td>
+              <td>
+                <strong>City</strong> {{data.city}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="col-md-3">
+            <small>Sales in last 24h</small>
+            <h2 class="no-margins">206 480</h2>
+            <div id="sparkline1"></div>
+        </div> -->
+
+
+    </div>
+
+
+  </div>
+</div>
